@@ -10,7 +10,7 @@ user node['chef_task_1']['user'] do
   home '/home/devops'
   shell '/bin/bash'
   action :create
-  passwd '$1$MVV1btBB$KCbKYrqlTulJBJbYd1d7d0'
+  password '$1$MVV1btBB$KCbKYrqlTulJBJbYd1d7d0'
 end
 
 # create group "devops"
