@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/centos-6.7"
+  config.vm.box = "bento/centos-6.8"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
   config.berkshelf.enabled = true
   config.berkshelf.berksfile_path = "Berksfile"
   config.vm.provision "chef_solo" do |chef|
-    chef.cookbooks_path = "test_cookbook"
+    chef.cookbooks_path = "chef_task_1"
 
     chef.run_list = [
       "recipe[chef_task_1::default]"
